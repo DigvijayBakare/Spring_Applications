@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- This is our bean -->
+    <bean class="com.springcore.ref.B" name="bRef">
+        <property name="y" value="20" />
+    </bean>
+    <bean class="com.springcore.ref.A" name="aRef" p:x="33" p:b-ref="bRef" />
+        <!--<property name="x" value="12" />
+        &lt;!&ndash;<property name="b">
+            <ref bean="bRef" />
+        </property>&ndash;&gt;
+        <property name="b" ref="bRef" />
+    </bean>-->
+
+</beans>

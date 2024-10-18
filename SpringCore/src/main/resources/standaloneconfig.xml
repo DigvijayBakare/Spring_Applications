@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd
+    ">
+
+    <!-- Standalone list -->
+    <util:list list-class="java.util.LinkedList" id="myFriends">
+        <value>Aman</value>
+        <value>Rohit</value>
+        <value>Shree</value>
+        <value>Ravi</value>
+    </util:list>
+
+    <!-- Standalone map -->
+    <util:map map-class="java.util.TreeMap" id="fees">
+        <entry key="Java" value="35000" />
+        <entry key="Etl" value="40000" />
+        <entry key="Testing" value="15000" />
+    </util:map>
+
+    <!-- Standalone properties -->
+    <util:properties id="dbconfig">
+        <prop key="driver">org.postgresql.Driver</prop>
+        <prop key="url">jdbc:postgresql://localhost:5432/mavenproject</prop>
+        <prop key="username">asdfgh</prop>
+        <prop key="password">741852</prop>
+    </util:properties>
+
+    <!-- This is our bean -->
+    <bean class="com.springcore.standaloneCollection.Person" name="p1">
+        <property name="friends" ref="myFriends" />
+        <property name="feeStructure" ref="fees" />
+        <property name="props" ref="dbconfig"/>
+    </bean>
+
+</beans>
