@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,14 +12,18 @@
 <body style="background-color: #e2e2e2;">
     <div class="container mt-4">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-8 offset-md-2">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="text-center">Complex Form</h3>
-                        <form action="handleForm" method="POST">
+                        <h3 class="text-center">Registration Form</h3>
+                        <div class="alert alert-danger" role="alert">
+                          <form:errors path="student.*" cssClass="error" />
+                        </div>
+                        <form:form action="handleForm" method="POST">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input name="name" type="text" class="form-control" id="name" placeholder="Enter Name">
+                                <form:errors path="name" cssClass="error text-danger" />
                                 <small class="form-text text-muted">We'll never share your name with anyone else.</small>
                             </div>
 
@@ -60,11 +67,24 @@
                                     <option value="normalstudent">Normal Student</option>
                                 </select>
                             </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>Address</p>
+                                    <div  class="form-group">
+                                        <input
+                                         name="address.street" type="text" class="form-control" placeholder="Enter street"/>
+                                    </div>
+                                    <div  class="form-group">
+                                        <input
+                                         name="address.city" type="text" class="form-control" placeholder="Enter city"/>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
-                        </form>
+                        </form:form>
                     </div>
                 </div>
             </div>
