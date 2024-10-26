@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,13 +17,12 @@
   <body>
     <div class="container p-5">
         <h1>Upload Image</h1>
-        <form action="uploadImage" method="post" enctype="multipart/form-data">
-          <div class="form-group">
-            <label for="exampleFormControlFile1">Select your image</label>
-            <input type="file" name="image" class="form-control-file" id="image">
-          </div>
-          <button class="btn btn-outline-success">Upload</button>
+        <form action="${pageContext.request.contextPath}/upload" method="post" enctype="multipart/form-data">
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" id="image">
+            <button type="submit">Upload</button>
         </form>
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
