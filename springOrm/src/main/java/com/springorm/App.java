@@ -121,7 +121,7 @@ public class App {
                         break;
                     case 6: // exit the loop
                         go = false;
-                        System.out.println("Thank you for visiting!!!" +
+                        System.out.println("Thank you for using my application!!!" +
                                 "\nCome again!!!!");
                         break;
                     default:
