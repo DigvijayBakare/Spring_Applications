@@ -1,0 +1,13 @@
+{
+  "Employees": {
+    "userId": "simplifyingTech",
+    "jobTitleName": "Developer",
+    "firstName": "Simplifying",
+    "lastName": "Tech",
+    "preferredFullName": "Simplifying Tech",
+    "employeeCode": "A1",
+    "region": "CA",
+    "phoneNumber": "702-1234217",
+    "emailAddress": "simplifyingTech@gmail.com"
+  }
+}

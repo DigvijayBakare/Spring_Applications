@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<root>
+    <Employees>
+        <jobTitleName>Developer</jobTitleName>
+        <firstName>Simplifying</firstName>
+        <lastName>Tech</lastName>
+        <emailAddress>simplifyingTech@gmail.com</emailAddress>
+        <phoneNumber>702-1234217</phoneNumber>
+        <preferredFullName>Simplifying Tech</preferredFullName>
+        <region>CA</region>
+        <userId>simplifyingTech</userId>
+        <employeeCode>A1</employeeCode>
+    </Employees>
+</root>
